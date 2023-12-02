@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
+import 'blocs.dart';
 import 'pages.dart';
 
 void main() {
@@ -17,7 +19,10 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MainPage(title: 'Bloc Demo Home Page'),
+      home: BlocProvider(
+        create: (context) => CounterBloc(),
+        child: const BlocPage(title: 'Bloc Demo Home Page'),
+      ),
     );
   }
 }
