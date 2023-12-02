@@ -17,6 +17,12 @@ class _MainPageState extends State<MainPage> {
     });
   }
 
+  void _resetCounter() {
+    setState(() {
+      _counter = 0;
+    });
+  }
+
   void _decrementCounter() {
     setState(() {
       _counter--;
@@ -46,6 +52,11 @@ class _MainPageState extends State<MainPage> {
             onPressed: _incrementCounter,
             tooltip: 'Increment',
             child: const Icon(Icons.add),
+          ),
+          FloatingActionButton(
+            onPressed: _resetCounter,
+            tooltip: 'Reset',
+            child: const Text('0'),
           ),
           FloatingActionButton(
             onPressed: _decrementCounter,
