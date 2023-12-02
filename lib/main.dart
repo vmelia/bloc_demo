@@ -20,8 +20,10 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: BlocProvider(
-        create: (context) => CounterBloc(),
-        child: const BlocPage(title: 'Bloc Demo Home Page'),
+        // create: (context) => CounterBloc(),
+        // child: const BlocPage(),
+        create: (context) => CounterCubit(),
+        child: const CubitPage(),
       ),
     );
   }

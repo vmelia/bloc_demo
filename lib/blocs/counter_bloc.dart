@@ -1,5 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import 'counter_state.dart';
+
 abstract class CounterEvent {}
 
 class IncrementEvent extends CounterEvent {}
@@ -7,11 +9,6 @@ class IncrementEvent extends CounterEvent {}
 class DecrementEvent extends CounterEvent {}
 
 class ResetEvent extends CounterEvent {}
-
-class CounterState {
-  final int count;
-  CounterState(this.count);
-}
 
 class CounterBloc extends Bloc<CounterEvent, CounterState> {
   CounterBloc() : super(CounterState(0)) {
