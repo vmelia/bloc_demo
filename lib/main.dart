@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import 'blocs.dart';
 import 'pages.dart';
 
@@ -20,10 +19,10 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: BlocProvider(
-        // create: (context) => CounterBloc(),
-        // child: const BlocPage(),
-        create: (context) => CounterCubit(),
-        child: const CubitPage(),
+        create: (context) => CounterBloc(),
+        child: const BlocPage(),
+        // create: (context) => CounterCubit(),
+        // child: const CubitPage(),
       ),
     );
   }
